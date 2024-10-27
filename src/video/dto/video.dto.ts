@@ -25,8 +25,7 @@ export class VideoDto{
     @Exclude()
     type_id: number;
 
-    @Exclude()
-    videos_path: string;
+
 
     // tạo object mà tất cả các attribute đều là optional
     constructor(partial: Partial<VideoDto>){

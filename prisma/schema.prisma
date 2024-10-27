@@ -61,7 +61,6 @@ model video {
   source        String?         @db.VarChar(255)
   user_id       Int?
   type_id       Int?
-  videos_path   String?         @db.VarChar(255)
   users         users?          @relation(fields: [user_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction, map: "video_ibfk_1")
   video_type    video_type?     @relation(fields: [type_id], references: [type_id], onDelete: NoAction, onUpdate: NoAction, map: "video_ibfk_2")
   video_comment video_comment[]
